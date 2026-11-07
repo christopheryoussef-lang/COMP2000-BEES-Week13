@@ -3,13 +3,10 @@
     "configurations": [
         {
             "type": "java",
-            "name": "App",
+            "name": "Bee Simulator",
             "request": "launch",
             "mainClass": "App",
-            "osx": {
-                "vmArgs": "-XstartOnFirstThread"
-            }
+            "cwd": "${workspaceFolder}"
         }
     ]
 }
-// flag for mac to run on the first thread since crashes happened due to it running on second thread, its talking to the JVM
