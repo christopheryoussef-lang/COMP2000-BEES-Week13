@@ -1,0 +1,7 @@
+build/
+bin/
+screenshots/
+*.log
+!evidence/*.log
+hs_err_pid*
+docs/.obsidian/workspace.json
