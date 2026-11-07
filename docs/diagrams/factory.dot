@@ -1,0 +1,23 @@
+digraph Factory {
+  graph [rankdir=TB, bgcolor="white", fontname="Helvetica", fontsize=22, pad=0.35, nodesep=0.4, ranksep=0.6,
+    label="COMP2000 / Bees Week 13\nSimple Factory: creating a valid adult bee", labelloc=t, size="10.8,7.3"];
+  node [shape=record, fontname="Helvetica", fontsize=11, style=filled, fillcolor="#f9f7ea", color="#5f7360", margin="0.18,0.12"];
+  edge [fontname="Helvetica", fontsize=10, color="#5f7360"];
+  inputs [label="{Creation requests|Simulation.reset(): queen and six workers\lSceneRenderer: add worker button / B key\lHive.update(): mature larvae become adults\l}", fillcolor="#f2bf46"];
+  hive [label="{Hive (factory client / population owner)|addBee(kind): Bee\lCheck population cap and duplicate queen\lAllocate name, call factory, register bee\l}", fillcolor="#dfebd8"];
+  factory [label="{BeeFactory (simple factory)|Kind: WORKER, QUEEN\lstatic create(kind, name, hive): Bee\l}"];
+  bee [label="{\<\<abstract\>\> Bee|name / position / collider (SceneObject)\lhealth / age / hive / movement\lupdate(delta): Updatable contract\l}"];
+  worker [label="{BeeWorker|RESTING / FETCHING / COLLECTING\lRETURNING / DEFENDING\lupdate(delta)\l}"];
+  queen [label="{BeeQueen|Egg-laying timer\lupdate(delta)\l}"];
+  larvae [label="{Larvae|age / maturation / hatched state\lisMature()\l}"];
+  inputs -> hive [label="request Kind"];
+  larvae -> hive [label="mature: worker, or queen if absent"];
+  hive -> factory [label="create(kind, uniqueName, this)"];
+  hive -> bee [label="owns List<Bee>", arrowtail=diamond, dir=both, arrowhead=vee];
+  factory -> worker [style=dashed, label="new BeeWorker(...)"];
+  factory -> queen [style=dashed, label="new BeeQueen(...)"];
+  bee -> worker [dir=back, arrowtail=empty, label="extends"];
+  bee -> queen [dir=back, arrowtail=empty, label="extends"];
+  note [shape=note, fontsize=10, fillcolor="white", label="This is a Simple Factory, not the GoF Factory Method pattern.\lCreation is centralized in a static method; there is no overridable creator hierarchy.\lAlternative: constructors scattered through the controller and hatching code.\lTrade-off: adding a bee kind edits the enum and switch. Hive retains population rules.\lThis factory and the initial Strategy seam were already in the supplied Week 7 code.\lSources: BeeFactory.java, Hive.java, Bee.java, BeeWorker.java, BeeQueen.java, Larvae.java.\l"];
+  bee -> note [style=invis]; worker -> note [style=invis]; queen -> note [style=invis];
+}

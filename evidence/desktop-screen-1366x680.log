@@ -1,0 +1,5 @@
+ACTION PAUSE time=0.10 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+POLICY richest
+SELECT Hive / Meadow hive
+SCREENSHOT <project>/evidence/desktop-screen-1366x680.png
+FINAL time=0.10 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0

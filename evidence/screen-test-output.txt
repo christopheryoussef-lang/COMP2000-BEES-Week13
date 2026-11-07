@@ -1,0 +1,10 @@
+PASS 1366x768: entire 1280x768 window fits on screen.
+PASS 1366x768: bottom pause button is visible and clickable.
+PASS 1366x768: policy shortcut, hive inspector, screenshot and clean exit.
+PASS 1024x720: entire 1024x720 window fits on screen.
+PASS 1024x720: bottom pause button is visible and clickable.
+PASS 1024x720: policy shortcut, hive inspector, screenshot and clean exit.
+PASS 1366x680: entire 1280x680 window fits on screen.
+PASS 1366x680: bottom pause button is visible and clickable.
+PASS 1366x680: policy shortcut, hive inspector, screenshot and clean exit.
+PASS: 9 screen-fit checks.

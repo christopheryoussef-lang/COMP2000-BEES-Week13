@@ -1,0 +1,44 @@
+SELECT none
+ACTION PAUSE time=0.75 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+SCREENSHOT <project>/screenshots/bee-simulator.png
+POLICY richest
+COMPARE complete
+policy,seed,seconds,auto_threats,delivered,honey,workers,deaths
+nearest,2000,180.00,false,9850.00,9750.00,19,0
+richest,2000,180.00,false,9500.00,9400.00,19,0
+nearest,2001,180.00,false,10050.00,9950.00,19,0
+richest,2001,180.00,false,9600.00,9500.00,19,0
+nearest,2002,180.00,false,10150.00,10050.00,19,0
+richest,2002,180.00,false,9650.00,9550.00,19,0
+nearest,2003,180.00,false,9900.00,9800.00,19,0
+richest,2003,180.00,false,9550.00,9450.00,19,0
+
+SCREENSHOT <project>/screenshots/bee-simulator.png
+POLICY nearest
+SELECT none
+SELECT Flower / Flower 36
+SCREENSHOT <project>/screenshots/bee-simulator.png
+SELECT Worker bee / Worker 8
+ACTION WORKER time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+ACTION FLOWERS time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=0 hatched=0 deaths=0
+SELECT Wasp / Wasp 1
+ACTION WASP time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=1 hatched=0 deaths=0
+SELECT Exterminator / Exterminator 2
+ACTION VISITOR time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=2 hatched=0 deaths=0
+SCREENSHOT <project>/screenshots/bee-simulator.png
+ACTION SPEED time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=2 hatched=0 deaths=0
+ACTION THREATS time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=2 hatched=0 deaths=0
+ACTION PAUSE time=0.75 workers=7 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=60 enemies=2 hatched=0 deaths=0
+SELECT Hive / Meadow hive
+SELECT Queen bee / Queen 1
+SELECT Worker bee / Worker 2
+SCREENSHOT <project>/screenshots/bee-simulator.png
+SELECT Hive / Meadow hive
+SCREENSHOT <project>/screenshots/bee-simulator.png
+ACTION RESET time=0.00 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+ACTION SPEED time=0.37 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+ACTION SPEED time=1.10 workers=6 queen=true larvae=0 honey=20.00 delivered=0.00 flowers=50 enemies=0 hatched=0 deaths=0
+ACTION PAUSE time=34.60 workers=7 queen=true larvae=1 honey=1004.00 delivered=1000.00 flowers=46 enemies=0 hatched=1 deaths=0
+SELECT Hive / Meadow hive
+SCREENSHOT <project>/screenshots/bee-simulator.png
+FINAL time=34.60 workers=7 queen=true larvae=1 honey=1004.00 delivered=1000.00 flowers=46 enemies=0 hatched=1 deaths=0

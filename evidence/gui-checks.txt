@@ -1,0 +1,36 @@
+PASS native desktop window is visible
+PASS PAUSE control responds
+PASS desktop-paused.png is a PNG
+PASS desktop renders at 1280 x 800
+PASS policy shortcut selects richest strategy
+PASS background comparison completes all paired seeds
+PASS desktop-policy-comparison.png is a PNG
+PASS policy button restores nearest strategy
+PASS mouse ray selects the expected flower
+PASS desktop-flower-picker.png is a PNG
+PASS WORKER control responds
+PASS worker button adds a bee
+PASS FLOWERS control responds
+PASS flower button adds ten flowers
+PASS WASP control responds
+PASS VISITOR control responds
+PASS both enemy types spawn
+PASS desktop-enemies.png is a PNG
+PASS SPEED control responds
+PASS world time stays frozen while paused
+PASS THREATS control responds
+PASS PAUSE control responds
+PASS inspector shortcuts respond
+PASS desktop-orbit.png is a PNG
+PASS desktop-resized.png is a PNG
+PASS resizing renders at 1100 x 720
+PASS RESET control responds
+PASS reset restores initial colony
+PASS SPEED control responds
+PASS SPEED control responds
+PASS PAUSE control responds
+PASS desktop-completed.png is a PNG
+PASS queen and larva lifecycle progresses in the desktop app
+PASS desktop exits cleanly
+PASS desktop log has no warnings, errors or exceptions
+PASS: 35 desktop checks.

@@ -1,0 +1,26 @@
+digraph Strategy {
+  graph [rankdir=TB, bgcolor="white", fontname="Helvetica", fontsize=22, pad=0.35, nodesep=0.35, ranksep=0.6,
+    label="COMP2000 / Bees Week 13\nStrategy: choosing a flower for the next trip", labelloc=t, size="10.8,7.3"];
+  node [shape=record, fontname="Helvetica", fontsize=11, style=filled, fillcolor="#f9f7ea", color="#5f7360", margin="0.18,0.12"];
+  edge [fontname="Helvetica", fontsize=10, color="#5f7360"];
+  client [label="{Clients|SceneRenderer: P key / policy button\lApp: --policy\lSimulationExperiment: paired trials\l}", fillcolor="#f2bf46"];
+  simulation [label="{Simulation|foragingPolicy: ForagingPolicy\lsetForagingPolicy(policy)\lreset() retains selected policy\l}"];
+  policy [label="{ForagingPolicy (enum)|NEAREST / RICHEST\lstrategy(): FlowerSelectionStrategy\l}", fillcolor="#dfebd8"];
+  worker [label="{BeeWorker|RESTING: requests next reservation\lFETCHING / COLLECTING: keeps reservation\l}"];
+  field [label="{Field (context)|selectionStrategy: FlowerSelectionStrategy\lsetSelectionStrategy(strategy)\lreserveFlower(worker): Flower\l}", fillcolor="#dfebd8"];
+  strategy [label="{\<\<functional interface\>\>\nFlowerSelectionStrategy|choose(flowers, beePosition): Flower\l}"];
+  nearest [label="{NearestFlowerStrategy|Ignore empty / occupied flowers\lMinimize distance\l}"];
+  richest [label="{RichestFlowerStrategy|Ignore empty / occupied flowers\lMaximize nectar, then minimize distance\lUse name to resolve equal scores\l}"];
+  flower [label="{Flower|reserve(worker): boolean\lharvest(worker, amount): double\lrelease(worker)\l}"];
+  client -> simulation [label="select policy"];
+  simulation -> policy [label="holds"];
+  simulation -> field [label="supplies policy.strategy()"];
+  worker -> field [label="1. reserveFlower(this)"];
+  field -> strategy [label="2. choose(available list, position)", arrowhead=vee];
+  field -> flower [label="3. validate membership; reserve(worker)"];
+  policy -> strategy [style=dashed, label="stateless instances"];
+  strategy -> nearest [style=dashed, dir=back, arrowtail=empty, label="implements"];
+  strategy -> richest [style=dashed, dir=back, arrowtail=empty, label="implements"];
+  note [shape=note, fontsize=10, fillcolor="white", label="Why Strategy: change the selection rule without changing the worker lifecycle.\lAlternative: a policy switch inside BeeWorker would couple movement and ranking.\lTrade-off: extra types and indirection; existing trips keep their reservations.\lSources: Field.java, FlowerSelectionStrategy.java, NearestFlowerStrategy.java,\lRichestFlowerStrategy.java, ForagingPolicy.java, Simulation.java, BeeWorker.java.\l"];
+  nearest -> note [style=invis]; richest -> note [style=invis];
+}

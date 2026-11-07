@@ -1,0 +1,40 @@
+Build passed (Java 17).
+PASS movement stops at its destination
+PASS invalid coordinates and movement are rejected
+PASS ray picker chooses nearest active object regardless of list order
+PASS collision handles parallel, inside and zero-direction rays
+PASS hives and colliders do not share mutable state
+PASS empty flower field leaves a worker waiting without recursion
+PASS flower reservations prevent multiple workers taking the same flower
+PASS field applies its supplied flower selection strategy
+PASS harvesting cannot overdraw a flower
+PASS worker completes multiple trips and conserves nectar
+PASS death releases a worker's reserved flower
+PASS queen eggs consume food and larvae mature into workers
+PASS a maturing larva replaces a dead queen
+PASS population cap permits a reserved brood slot to hatch
+PASS wasps can kill bees and steal only available honey
+PASS worker bees defend against nearby wasps
+PASS exterminator spray affects both bees and wasps
+PASS expired enemies are inactive and removed
+PASS fixed steps produce the same result at different render rates
+PASS pause freezes the world and speed changes simulation time
+PASS reset restores a reproducible initial world
+PASS flower and enemy limits prevent unlimited spawning
+PASS invalid amounts and time fail clearly
+PASS automatic threats continue in an empty colony without a crash
+  SOAK time=1800.00 workers=0 queen=false larvae=0 honey=12120.20 delivered=17194.50 flowers=50 enemies=2 hatched=47 deaths=54
+PASS 30-minute simulation keeps resources and populations bounded
+PASS: 25 behavioral tests.
+PASS policies make distinct choices on depleted versus rich patches
+PASS richest strategy excludes depleted and reserved flowers and breaks ties by distance
+PASS policy changes preserve in-flight reservations and affect the next booking
+PASS reset keeps the selected policy while reproducing its seeded initial world
+PASS sequential and parallel trials agree exactly, with and without threats
+PASS policy comparison exhibits a different outcome in a real seeded colony
+PASS grouped statistics preserve policy counts and observed totals
+PASS invalid experiment inputs fail before launching trials
+PASS camera projection and inverse ray select the same world object after orbit and resize
+PASS near-plane clipping keeps close-view ground visible and finite
+PASS original image and mesh assets load through standard Java
+PASS: 11 Week 13 tests.

@@ -1,0 +1,5 @@
+PASS clean ZIP extraction compiles using only the standard Java classpath.
+PASS unchanged headless result: time=120.00 workers=14 queen=true larvae=2 honey=5440.00 delivered=5500.00 flowers=44 enemies=0 hatched=8 deaths=0
+PASS refreshed desktop opens from the ZIP on a 1366x768 screen, saves a PNG and exits cleanly.
+PASS archive has only java.base and java.desktop runtime dependencies.
+PASS entry-point-only compilation resolves the painter from source using the Windows launcher Java options; Windows runtime is not claimed.

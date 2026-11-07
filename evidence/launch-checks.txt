@@ -1,0 +1,21 @@
+PASS valid JSON: .vscode/settings.json
+PASS valid JSON: .vscode/launch.json
+PASS invalid arguments rejected: --headless --seconds -1
+PASS invalid arguments rejected: --headless --seconds NaN
+PASS invalid arguments rejected: --invalid value
+PASS invalid arguments rejected: --seed
+PASS invalid arguments rejected: --policy unknown
+PASS invalid arguments rejected: --compare --runs 0
+PASS invalid arguments rejected: --compare --runs 33
+PASS invalid arguments rejected: --compare --seconds 3601
+PASS invalid arguments rejected: --parallel
+PASS invalid arguments rejected: --frames -1
+PASS richest-policy headless run completes
+PASS serial and parallel CLI reports are byte-identical
+PASS CSV contains every paired trial
+PASS delivery has no library directory or source JAR
+PASS no-display launch gives clear headless guidance
+PASS missing assets produce a clear error before opening a window
+PASS launcher works from another directory and keeps build output out of CSV
+PASS compiled application depends only on java.base and java.desktop
+PASS: 20 launch checks.

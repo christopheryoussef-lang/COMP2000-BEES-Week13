@@ -1,0 +1,47 @@
+BEES WEEK 13 — START HERE
+
+1. Extract the whole ZIP before running anything.
+2. Install a JDK 17 or newer, with java and javac on PATH.
+3. Windows: open Command Prompt in this folder and run run.bat.
+   Linux/macOS: open a terminal here and run bash run.sh.
+4. Run test.bat (Windows) or bash test.sh (Linux/macOS) to check the code.
+
+Main files:
+- src/ and Assets/: complete runnable application.
+- docs/design-patterns.pdf: required Strategy / Simple Factory diagrams.
+- docs/WEEK13-TECHNICAL-NOTES.md: code locations, snippets, trade-offs,
+  parallelism explanation and a demonstration route for the worksheet.
+- docs/CHANGES-FROM-WEEK7.md: what changed and what was retained.
+- docs/VERIFICATION.md and evidence/: actual test results and screenshots.
+- README.md: controls, command-line options and setup.
+
+New controls: P changes the foraging policy; C compares both policies on four
+paired seeds. The comparison runs separately from the live colony.
+
+The refreshed Bee Meadow view adds shaded terrain and trees, clearer bees and
+flowers, hover/selection feedback, a grouped inspector and live honey history.
+The original simulation rules and seeded experiment results are retained.
+
+Individual repository:
+https://github.com/christopheryoussef-lang/COMP2000-BEES-Week13
+This is a public fork of NewSuperMarioBrosWii/COMP2000-BEES and retains the
+team's commit history. Its current source is the prepared individual version.
+
+Client completion:
+- Read and understand the implementation and technical notes.
+- Complete the worksheet with your name and your individual repository/fork URL.
+- Write your own reflection, personal inspiration/plan and Weeks 7–13 logbook.
+- Describe actual Week 7 feedback; none was supplied with this code delivery.
+- Acknowledge AI assistance as agreed with your lecturer.
+- Use the individual fork URL above in the worksheet.
+- Keep future source changes in this fork; do not commit build/ or screenshots/.
+
+GitHub publication and university submission are separate. No assessment has
+been submitted to the university by this code handoff.
+
+Submission: the brief asks for the worksheet and logbook without a ZIP; the
+worksheet also requests a diagram PDF. This ZIP is the project handoff, not
+an assessment upload. Use the lecturer's upload arrangement for the PDF.
+
+Windows/macOS launchers are supplied but native runtime verification here was
+on Linux. See docs/VERIFICATION.md for the precise test scope.
